@@ -80,17 +80,6 @@ const ramdonstyle = styll[Math.floor(Math.random() * styll.length)]
   const content = JSON.stringify(m.message) 
   const type = m.mtype 
   const arg = body.substring(body.indexOf(' ') + 1) 
-/*  
-//  MULTIPREFIJO
-  const prefixes = ["/", ".", "#", "*", ",", "?", "&", "+", "-", "∆", "|", "!", "•", "~", "×", "÷", "§", "°"] // modifica el prefijo
-  global.prefix = prefixes.find(pref => body.startsWith(pref))
-  const isCmd = body.startsWith(prefix);
-  const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCase() : null
-*/  
-  
-  global.prefix = "."
-const isCmd = body.startsWith(prefix)
-const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCase() : null
 
 
   const args = body.trim().split(/ +/).slice(1) 
@@ -151,6 +140,12 @@ const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCa
   const reply = (text) => { 
   let estilo = ramdonstyle(text);
   m.reply(text)}
+  
+  
+  global.prefix = prefixes.find(pref => body.startsWith(pref))
+  const isCmd = body.startsWith(prefix);
+  const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCase() : null
+  
   
   const sendAdMessage = (text, title, body, image, url) => { conn.sendMessage(m.chat, {text: text, contextInfo: { externalAdReply: { title: title, body: body, mediaUrl: url, sourceUrl: url, previewType: 'PHOTO', showAdAttribution: true, thumbnail: image, sourceUrl: url }}}, {})}  
   const sendImage = ( image, caption ) => { conn.sendMessage(m.chat, { image: image, caption: caption }, { quoted: m })}  
@@ -2026,7 +2021,7 @@ conn.sendMessage(m.chat, {document: {url: link}, caption: '*𝙰𝚀𝚄𝙸 �
            let stdout = execSync('git pull' + (m.fromMe && q ? ' ' + q : ''))  
             await conn.sendMessage(m.chat, { text: stdout.toString() }, { quoted: msg });  
           } catch {  
-           let updatee = execSync('git remote set-url origin https://github.com/andresvpn/ESCANOR-MD-BOT && git pull')  
+           let updatee = execSync('git remote set-url origin https://github.com/andresvpn/ESCANOR-MD && git pull')  
             await conn.sendMessage(m.chat, { text: updatee.toString() }, { quoted: msg });  
          }  
            break  

@@ -1,6 +1,11 @@
 
 const fs = require("fs")
 
+const prefixes = ["/", ".", "#", "*", ",", "?", "&", "+", "-", "∆", "|", "!", "•", "~", "×", "÷", "§", "°"] // modifica el prefijo
+
+
+
+
 global.owner = [
 ["573043603261", "andres-vpn", true],
 ["573007741567", "andres-vpn-bot", true]
