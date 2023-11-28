@@ -1,7 +1,7 @@
 
 const fs = require("fs")
 
-const prefixes = ["/", ".", "#", "*", ",", "?", "&", "+", "-", "∆", "|", "!", "•", "~", "×", "÷", "§", "°"] // modifica el prefijo
+global.prefixes = ["/", ".", "#", "*", ",", "?", "&", "+", "-", "∆", "|", "!", "•", "~", "×", "÷", "§", "°"] // modifica el prefijo
 
 
 

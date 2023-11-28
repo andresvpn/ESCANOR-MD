@@ -730,8 +730,8 @@ let resullt = ramdonstyle(menuu)
   "containsAutoReply": true,  
   "mediaType": 1,   
   "thumbnail": menu,  
-  "mediaUrl": `https://chat.whatsapp.com/DhqAUciMtKO7l1o9cu2Kcu`,  
-  "sourceUrl": `https://chat.whatsapp.com/DhqAUciMtKO7l1o9cu2Kcu`  
+  "mediaUrl": `https://chat.whatsapp.com/C9Wv6eqFWOeKxh8EMxfCF4`,  
+  "sourceUrl": `https://chat.whatsapp.com/C9Wv6eqFWOeKxh8EMxfCF4`  
   }  
   }  
   }, { quoted: fkontak }) 
